@@ -29,8 +29,6 @@
         <div class="col-sm-10">          
              <div class="row">       
                  <h4 class="alert alert-primary">thể loại giày </h4>
-                    <%= request.getParameter("first_name")%>
-
                     <div class="col-sm-12">
                         <div class="row">                       
                 <%
