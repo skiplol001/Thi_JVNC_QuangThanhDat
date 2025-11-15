@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <footer class="container mt-2">
-            <strong>&copy; 2025 - Họ tên sinh viên - Mã số sinh viên </strong>
+            <strong>&copy; 2025 - Quảng Thành Đạt - 2421160045 </strong>
 </footer>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -8,11 +8,12 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Trang chủ </a>
+          <a class="nav-link active" href="<%=request.getContextPath()%>/trang-chu" href="#">Trang chủ </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Sản phẩm</a>
+          <a class="nav-link" href="<%=request.getContextPath()%>/san-pham" href="#">Sản phâm</a>
         </li>         
+     
      
     </div>
   </div>

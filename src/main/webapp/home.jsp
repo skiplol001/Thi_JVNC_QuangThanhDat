@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="model.SanPham"%>
+<%@page import="model.SanPham"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -15,74 +18,39 @@
 
 
 <div class="container" id="main-content">
-    <div class="row">       
+   
+       <h4 class="alert alert-primary">Tiêu đề</h4>
+
+     <div class="row">       
         <div class="col-sm-12">
-            <h4 class="alert alert-primary">Tiêu đề</h4>
             <div class="row">   
+              <c:forEach var="s" items="${dsSach}">
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="card mb-2">
                         <div class="card-header">
-                            Product name
+                            ${s.tensp}
                         </div>
                         <div class="card-body">
-                            <img class="card-img" src="assets/images/products/shoes.jpg" alt="Card image cap">                         
+                            <img class="card-img" src="assets/images/products/${s.hinh}" alt="Card image cap">                         
                         </div>
                         <div class="card-footer">
                             <div class="row">
                                 <div class="col">
-                                    <p class="btn btn-danger btn-block">1,990,000 đ</p>
+                                    <p class="btn btn-danger btn-block"><fmt:formatNumber pattern="#,##0 vnd" value="${s.dongia}" /></p>
                                 </div>
-                                <div class="col">
+                                <div class="col text-end">
                                     <a href="#" class="btn btn-success btn-block">Add to cart</a>
                                 </div>
                             </div>
                         </div>
                     </div>              
                 </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card mb-2">
-                        <div class="card-header">
-                            Product name
-                        </div>
-                        <div class="card-body">
-                            <img class="card-img" src="assets/images/products/shoes.jpg" alt="Card image cap">                         
-                        </div>
-                        <div class="card-footer">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="btn btn-danger btn-block">1,990,000 đ</p>
-                                </div>
-                                <div class="col">
-                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>              
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card mb-2">
-                        <div class="card-header">
-                            Product name
-                        </div>
-                        <div class="card-body">
-                            <img class="card-img" src="assets/images/products/shoes.jpg" alt="Card image cap">                          
-                        </div>
-                        <div class="card-footer">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="btn btn-danger btn-block">1,990,000 đ</p>
-                                </div>
-                                <div class="col">
-                                    <a href="#" class="btn btn-success btn-block">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                      
-                </div>             
+              </c:forEach>
             </div>                       
         </div>
+    </div>        
+</div>    
 
-    </div>
 </div><!-- /.container -->
 <!--nhung noi dung footer.jsp-->
 <jsp:include page="shared/footer.jsp" />   
