@@ -52,9 +52,23 @@ public class SachDAO {
         }
         return ds;
     }
+      public ArrayList<SanPham> dem(int maloai) {
+        ArrayList<SanPham> ds = new ArrayList<>();
+        String sql = " select count (*) from SanPham where maloai=?";
+        conn =new DbContext().getConnection();
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, maloai);
+            rs = ps.executeQuery();
+            
+        } catch (Exception ex) {
+            System.out.println("Loi:" + ex.toString());
+        }
+        return ds;
+    }
     public static void main(String[] args) {
         SachDAO sDao = new SachDAO();
-        for(SanPham s:sDao.laySachTheoCD(3))
+        for(SanPham s:sDao.dem(3))
         {
             System.out.println(s);
         }

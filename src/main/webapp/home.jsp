@@ -19,7 +19,7 @@
 
 <div class="container" id="main-content">
    
-       <h4 class="alert alert-primary">Tiêu đề</h4>
+       <h4 class="alert alert-primary">Sản Phẩm khuyến mãi</h4>
 
      <div class="row">       
         <div class="col-sm-12">
